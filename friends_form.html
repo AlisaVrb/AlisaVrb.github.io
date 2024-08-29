@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Анкета для дЕвОчЕк</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,
+      wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,
+wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="full-header">
+        <h1>✨✨✨</h1>
+        <h1 class="roboto-mono main-header">АНКЕТА</h1>
+        <h1>✨✨✨</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about-you">О тебе</a></li>
+        </ul>
+        <ul>
+          <li><a href="#what-do-you-like">О том, что ты любишь</a></li>
+        </ul>
+        <ul>
+          <li><a href="#contacts">Мои контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="text roboto-mono">
+        Привет! Я рада, что ты пришла заполнить мою анкету для друзей :)
+      </h2>
+
+      <form action="" class="roboto-mono">
+        <p id="caption">Вспомогательным текстом можно увидеть мои ответы 😎</p>
+        <section id="about-you">
+          <div>
+            <label for="name">Как тебя зовут?</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Алиса"
+              required
+            />
+            <p class="form_error">Введи минимум 2 символа :)</p>
+            <p class="form_check hidden">Допустимо вводить только буквы</p>
+          </div>
+
+          <div>
+            <label for="age">Сколько тебе лет?</label>
+            <input type="number" id="age" name="age" placeholder="22" />
+          </div>
+
+          <div>
+            <p>Какая ты картинка с котиком?</p>
+            <div>
+              <input
+                type="checkbox"
+                name="kitty"
+                value="kotik-1"
+                id="kotik-1"
+              />
+              <label for="kotik-1"
+                ><img src="img/mem1.jpg" alt="котик после выходных"
+              /></label>
+              <input
+                type="checkbox"
+                name="kitty"
+                value="kotik-2"
+                id="kotik-2"
+                checked
+              />
+              <label for="kotik-2"
+                ><img
+                  src="img/mem2.jpg"
+                  alt="котик, который не хочет работать работу"
+              /></label>
+              <input
+                type="checkbox"
+                name="kitty"
+                value="kotik-3"
+                id="kotik-3"
+              />
+              <label for="kotik-3"
+                ><img src="img/mem3.jpg" alt="котик после выходных"
+              /></label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="kitty"
+                value="kotik-4"
+                id="kotik-4"
+              />
+              <label for="kotik-4"
+                ><img src="img/mem4.jpg" alt="тревожный котик"
+              /></label>
+              <input
+                type="checkbox"
+                name="kitty"
+                value="kotik-5"
+                id="kotik-5"
+                checked
+              />
+              <label for="kotik-5"
+                ><img src="img/mem5.jpg" alt=" непродуктивный котик"
+              /></label>
+              <input
+                type="checkbox"
+                name="kitty"
+                value="kotik-6"
+                id="kotik-6"
+                checked
+              />
+              <label for="kotik-6"
+                ><img src="img/mem6.jpg" alt="котик без финансовой грамотности"
+              /></label>
+            </div>
+          </div>
+
+          <div>
+            <p>У тебя есть домашние животные?</p>
+            <label for="yes">Да</label>
+            <input type="radio" id="yes" name="pets" value="yes" />
+            <label for="no">Нет</label>
+            <input type="radio" id="no" name="pets" value="no" checked />
+          </div>
+
+          <div class="pet-choice">
+            <p>Если да, то какие?</p>
+            <div>
+              <input type="checkbox" name="pet" value="cat" id="cat" />
+              <label for="cat">Кот</label>
+            </div>
+            <div>
+              <input type="checkbox" name="pet" value="dog" id="dog" />
+              <label for="dog">Собака</label>
+            </div>
+            <div>
+              <input type="checkbox" name="pet" value="fish" id="fish" />
+              <label for="fish">Рыбки</label>
+            </div>
+            <div>
+              <input type="checkbox" name="pet" value="turtle" id="turtle" />
+              <label for="turtle">Черепаха</label>
+            </div>
+            <div>
+              <input type="checkbox" name="pet" value="parrot" id="parrot" />
+              <label for="parrot">Попугай</label>
+            </div>
+          </div>
+
+          <div>
+            <label for="other">Кто-то более экзотический:</label>
+            <input type="text" name="other" id="other" />
+          </div>
+          <br />
+        </section>
+
+        <section id="what-do-you-like">
+          <div class="week">
+            <p>Твой любимый день недели?</p>
+            <select name="week" id="week">
+              <option value="monday">Понедельник</option>
+              <option value="tuesday">Вторник</option>
+              <option value="wednesday">Среда</option>
+              <option value="thursday">Четверг</option>
+              <option value="friday">Пятница</option>
+              <option value="saturday" selected>Суббота</option>
+              <option value="sunday">Воскресенье</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="singer"
+              >Твоя любимый исполнитель/исполнительница?</label
+            >
+            <input
+              type="text"
+              id="singer"
+              name="singer"
+              placeholder="Noize MC"
+            />
+          </div>
+
+          <div>
+            <label for="song">Твоя любимая песня в караоке?</label>
+            <input
+              type="text"
+              id="song"
+              name="song"
+              placeholder="Тату - Я сошла с ума"
+            />
+          </div>
+
+          <div class="flowers">
+            <p>Какие цветы любишь больше?</p>
+            <div>
+              <input
+                type="radio"
+                name="flower"
+                id="bush-rose"
+                value="bush-rose"
+              />
+              <label for="bush-rose">Кустовые розы</label>
+            </div>
+            <div>
+              <input type="radio" name="flower" id="chrys" value="chrys" />
+              <label for="chrys">Хризантемы</label>
+            </div>
+            <div>
+              <input type="radio" name="flower" id="rose" value="rose" />
+              <label for="rose">Розы</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="flower"
+                id="carnation"
+                value="carnation"
+              />
+              <label for="carnation">Гвоздики</label>
+            </div>
+            <div>
+              <input type="radio" name="flower" id="alst" value="alst" />
+              <label for="alst">Альстромерии</label>
+            </div>
+            <div>
+              <input type="radio" name="flower" id="lilies" value="lilies" />
+              <label for="lilies">Лилии</label>
+            </div>
+            <div>
+              <input type="radio" name="flower" id="eustoma" value="eustoma" />
+              <label for="eustoma">Эустомы</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="flower"
+                id="ranunculus"
+                value="ranunculus"
+                checked
+              />
+              <label for="ranunculus">Ранункулюсы</label>
+            </div>
+            <div>
+              <input type="radio" name="flower" id="potted" value="potted" />
+              <label for="potted">Люблю горшечные цветы</label>
+            </div>
+            <div>
+              <input type="radio" name="flower" id="wild" value="wild" />
+              <label for="wild">Люблю полевые цветы</label>
+            </div>
+          </div>
+
+          <div>
+            <label for="own">Свой вариант:</label>
+            <input type="text" name="own" id="own" />
+          </div>
+
+          <div>
+            <label for="book">Твоя любимая книга?</label>
+            <input
+              type="text"
+              name="book"
+              id="book"
+              placeholder="Гарри Поттер и Орден феникса"
+              size="30"
+            />
+          </div>
+          <br />
+
+          <div class="pastime">
+            <label for="pastime"
+              >Расскажи, чем любишь заниматься в свободное время:</label
+            ><br /><textarea
+              name="pastime"
+              id="pastime"
+              rows="5"
+              cols="50"
+              placeholder="Люблю видеться с друзьями, гулять, ходить в кАчАлОчКу. 
+А еще люблю прийти с работы, лечь на кровать и 2 часа смотреть рилсы."
+            ></textarea>
+          </div>
+
+          <div>
+            <button type="submit">Отправить анкету!</button>
+          </div>
+          <br />
+        </section>
+      </form>
+
+      <p class="form_send hidden">Анкета отправлена!</p>
+    </main>
+
+    <footer id="contacts">
+      <div>
+        <label for="telega" class="roboto-mono">Мой телеграм:</label>
+        <a href="https://t.me/alisa_vrb" id="telega">@alisa_vrb</a>
+      </div>
+      <div>
+        <label for="inst" class="roboto-mono">Мой инстаграм:</label>
+        <a href="https://www.instagram.com/aliska.vrb" id="inst">@aliska.vrb</a>
+      </div>
+    </footer>
+  </body>
+</html>
